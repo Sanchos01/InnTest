@@ -41,3 +41,4 @@ npm-debug.log
 # variables.
 /config/*.secret.exs
 inn_test.sqlite3*
+/rel/inn_test
