@@ -15,3 +15,6 @@ import "phoenix_html"
 //
 // Local files can be imported directly using relative paths, for example:
 import socket from "./socket"
+import Lobby from "./lobby"
+
+Lobby.init(socket, document.querySelector("#history"))

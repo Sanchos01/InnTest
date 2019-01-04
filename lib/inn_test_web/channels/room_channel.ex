@@ -14,14 +14,14 @@ defmodule InnTestWeb.RoomChannel do
     {:noreply, socket}
   end
 
-  def handle_in("new_inn", %{"inn" => inn}, socket) do
+  def handle_in("new_inn", %{"body" => inn}, socket) do
     case SimpleHistory.new(inn) do
       res when is_boolean(res) ->
-        {:reply, %{result: res}, socket}
+        {:reply, {:ok, %{result: res}}, socket}
       errors = [_|_] ->
-        {:reply, %{errors: errors}, socket}
+        {:reply, {:error, %{errors: errors}}, socket}
       :error ->
-        {:reply, %{errors: ["unknown error"]}, socket}
+        {:reply, {:error, %{errors: ["unknown error"]}}, socket}
     end
   end
 end
