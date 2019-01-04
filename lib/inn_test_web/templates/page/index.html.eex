@@ -1,0 +1,14 @@
+<p>Введите ИНН</p>
+
+<div id="insert" class="row">
+  <div class="column column-80">
+    <input id="chat-input" type="text" class="form-control" placeholder="..."></input>
+  </div>
+  <div class="column column-20">
+    <button id="send" class="button button-send">Отправить</button>
+  </div>
+</div>
+
+<div id="history" class="row">
+  <p>Loading history</p>
+</div>

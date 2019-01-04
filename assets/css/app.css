@@ -1,0 +1,10 @@
+/* This file is for your main application css. */
+
+@import "./phoenix.css";
+
+.button-send {
+  border-color: #000000;
+  color: #000000;
+  background-color: transparent;
+  border-radius: 4rem;
+}
